@@ -31,7 +31,7 @@ tmux send-keys "htop" C-m
 tmux select-window -t $SESSION:1
 tmux send-keys "roslaunch strands_bringup strands_core.launch"
 tmux select-window -t $SESSION:2
-tmux send-keys "roslaunch strands_karl karl_robot.launch"
+tmux send-keys "roslaunch strands_karl karl_robot.launch user:=strands"
 tmux select-window -t $SESSION:3
 tmux send-keys "ROS_MASTER_URI=http://karl:11311 roslaunch strands_karl karl_cams.launch"
 tmux select-window -t $SESSION:4
