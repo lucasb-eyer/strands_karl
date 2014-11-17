@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="machine" default="localhost"/>
+  <arg name="user" default=""/>
+
+  <arg name="with_mux" default="true"/>
+
+  <!-- Camera to use for navigation -->
+  <arg name="with_camera" default="true"/>
+  <arg name="camera" default="chest_xtion"/>
+  <!-- The following is so that the obstacle-avoidance stuff runs on the same
+       pc as the chest-cam, probably not to saturate the switch with point-clouds -->
+  <arg name="camera_ip" default="amsterdam.local"/>
+  <arg name="camera_user" default="scitos"/>
+
+  <!-- Map(s) to use for navigations -->
+  <arg name="map" default="$(find strands_karl)/resources/maps/umic_1st_floor.yaml"/>
+  <arg name="with_no_go_map" default="false"/>
+  <arg name="no_go_map" default="$(find strands_karl)/resources/maps/umic_1st_floor-nogo.yaml"/>
+  <arg name="topological_map" default="umic_1st_floor"/>
+
+  <!-- Configures the robot's behaviour when it has problems. -->
+  <arg name="mon_nav_config_file" default="$(find strands_recovery_behaviours)/config/monitored_nav_config.yaml"/>
+
+  <!-- Main part for navigation: The move_base and all chest-costmap stuff. -->
+  <include file="$(find strands_bringup)/launch/strands_navigation.launch">
+    <arg name="machine" value="$(arg machine)"/>
+    <arg name="user" value="$(arg user)"/>
+
+    <arg name="with_camera" value="$(arg with_camera)"/>
+    <arg name="camera" value="$(arg camera)"/>
+    <arg name="camera_ip" value="$(arg camera_ip)"/>
+    <arg name="camera_user" value="$(arg camera_user)"/>
+
+    <arg name="map" value="$(arg map)"/>
+    <arg name="with_no_go_map" value="$(arg with_no_go_map)"/>
+    <arg name="no_go_map" value="$(arg no_go_map)"/>
+
+    <arg name="with_mux" value="$(arg with_mux)"/>
+
+    <arg name="topological_map" value="$(arg topological_map)"/>
+    <arg name="mon_nav_config_file" value="$(arg mon_nav_config_file)"/>
+  </include>
+</launch>

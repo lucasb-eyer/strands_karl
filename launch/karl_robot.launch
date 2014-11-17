@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!-- Kept as similar as possible to the original one so we can switch to it soon. -->
+<launch>
+	<arg name="machine" default="$(optenv HOSTNAME localhost)" />
+	<arg name="user" default="" />
+
+	<arg name="with_mux" default="true" />
+	<arg name="js" default="$(optenv JOYSTICK_DEVICE /dev/input/rumblepad)" />
+	<arg name="laser" default="/dev/laser" />
+	<arg name="scitos_config" default="$(find strands_karl)/resources/SCITOSDriver.xml"/>
+
+    <!-- NOW when launching in a remote mode it will need the ROS_ENV_LOADER set if not it will leave it empty -->
+    <machine name="$(arg machine)" address="$(arg machine)" env-loader="$(optenv ROS_ENV_LOADER )" user="$(arg user)" default="true" />
+
+	<!-- SCITOS G5 Robot -->
+	<include file="$(find scitos_mira)/launch/scitos_mira.launch">
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+		<arg name="SCITOS_CONFIG" value="$(arg scitos_config)"/>
+	</include>
+
+	<!-- SICK S300 -->
+	<node pkg="sicks300" type="sick300_driver" name="sicks300" output="screen">
+		<param name="devicename" value="$(arg laser)" type="string"/>
+		<param name="field_of_view" value="225" type="double"/>
+		<param name="send_transform" value="0" type="int"/>
+		<remap from="laserscan" to="scan"/>
+	</node>
+
+	<!-- No real way to use an udev rule because no names given, so just /dev/ttyS0 -->
+	<include file="$(find flir_pantilt_d46)/launch/ptu46.launch">
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+	</include>
+
+	<!-- Diagnostics aggregator -->
+	<node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator">
+		<rosparam command="load" file="$(find strands_karl)/resources/diagnostics.yaml"/>
+	</node>
+
+
+	<!--- Robot state publisher -->
+	<include file="$(find scitos_description)/launch/scitos_state_publisher.launch">
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+	</include>
+
+
+	<!--- cmd vel mux -->
+    <include if="$(arg with_mux)" file="$(find scitos_cmd_vel_mux)/launch/mux.launch">
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+	</include>
+
+
+	<!--- Teleop Joystick -->
+     <include unless="$(arg with_mux)" file="$(find scitos_teleop)/launch/teleop_joystick.launch">
+        <arg name="js" value="$(arg js)" />
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+    </include>
+    <include if="$(arg with_mux)" file="$(find scitos_teleop)/launch/teleop_joystick_mux.launch">
+        <arg name="js" value="$(arg js)" />
+	    <arg name="machine"  value="$(arg machine)"/>
+	    <arg name="user"  value="$(arg user)"/>
+	</include>
+        
+
+        
+
+</launch>

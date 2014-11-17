@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_karl</name>
+  <version>0.0.0</version>
+  <description>The strands_karl package</description>
+
+  <maintainer email="beyer@vision.rwth-aachen.de">Lucas Beyer</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- From `karl_robot.launch` -->
+  <run_depend>scitos_mira</run_depend>
+  <run_depend>sicks300</run_depend>
+  <run_depend>flir_pantilt_d46</run_depend>
+  <run_depend>diagnostic_aggregator</run_depend>
+  <run_depend>scitos_description</run_depend>
+  <run_depend>scitos_cmd_vel_mux</run_depend>
+  <run_depend>scitos_teleop</run_depend>
+
+  <!-- From `karl_cams.launch` -->
+  <run_depend>openni_wrapper</run_depend>
+
+  <!-- From `karl_navigation.launch` -->
+  <run_depend>strands_recovery_behaviours</run_depend>
+  <run_depend>strands_bringup</run_depend>
+</package>
