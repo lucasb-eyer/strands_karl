@@ -108,6 +108,7 @@ We bought a switch (Netgear GS108), connected the on-board pc (`karl`) and the s
 6. Make sure there's passwordless ssh from `karl` to both sidepcs by creating a passwordless keypair
    for `karl` and push the public key to the side-pcs. See google.
 7. Add the side-pcs to your `known_hosts` file: `ssh-keyscan bruxelles.local >> ~/.ssh/known_hosts`.
+8. When sshing from a different pc, run `ssh karl` to connect to the main PC on Karl, and then `ssh scitos@bruxelles.local` to connect to the bruxelles side PC.
 
 **If you launch anything remotely**, make sure `ROS_MASTER_URI` is set on the *launching* pc.
 
