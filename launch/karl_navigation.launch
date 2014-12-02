@@ -45,6 +45,6 @@
     <arg name="lightEBC" value=""/>
 
     <arg name="with_site_movebase_params" value="true"/>
-    <arg name="site_movebase_params" value="$(find strands_karl)/resources/umic_1st_floor-nav.yaml"/>
+    <arg name="site_movebase_params" value="$(find strands_karl)/resources/maps/umic_1st_floor-nav.yaml"/>
   </include>
 </launch>
