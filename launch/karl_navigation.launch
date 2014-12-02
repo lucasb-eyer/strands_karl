@@ -44,7 +44,15 @@
     <!-- Don't turn off any EBC while docking! -->
     <arg name="lightEBC" value=""/>
 
+    <arg name="z_stair_threshold" value="0.2"/>
+    <arg name="z_obstacle_threshold" value="0.1"/>
+    <arg name="with_head_xtion" value="true"/>
+
     <arg name="with_site_movebase_params" value="true"/>
     <arg name="site_movebase_params" value="$(find strands_karl)/resources/maps/umic_1st_floor-nav.yaml"/>
+
+    <arg name="subsample_resolution" value="0.02"/>
+    <arg name="subsample_min_points" value="2"/>
+    <arg name="subsample_skip_points" value="10"/>
   </include>
 </launch>
