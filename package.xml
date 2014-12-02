@@ -24,4 +24,14 @@
   <!-- From `karl_navigation.launch` -->
   <run_depend>strands_recovery_behaviours</run_depend>
   <run_depend>strands_bringup</run_depend>
+
+  <!-- For the marathon routines. -->
+  <run_depend>strands_executive_msgs</run_depend>
+  <run_depend>scitos_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>strands_navigation_msgs</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>task_executor</run_depend>
+  <run_depend>mongodb_store</run_depend>
 </package>

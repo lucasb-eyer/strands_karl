@@ -1,4 +1,4 @@
-**WARNING**: This is not a proper README, it's more like a braindump.
+**PLEASE** create pull-requests if you had to do something differently. It's as easy as selecting the file in github and clicking on the pencil button in the top right corner, so there really is no excuse!
 
 Basics
 ======
@@ -144,8 +144,6 @@ MIRA
 
 We still need to have the MIRA license that were shipped with the robot located in `/opt/MIRA-licenses`.
 
-**TODO**: Update the firmware; waiting for md5sum confirmation.
-
 Udev-rules
 ==========
 
@@ -235,8 +233,6 @@ Basically, it's just `rosrun calibrate_chest calibrate_chest` when almost only t
 in the chest cam. Have the datacentre running for storing the calibration in there.
 It will open a viewer-window showing the "ground plane" and an axis for the camera. Close it.
 
-TODO: There is an offset between the point-cloud and the laser. Look at a wall.
-
 ### Cliffs
 
 That's any kind of "holes" in the ground, like stairs. Those are detected mainly by
@@ -320,6 +316,17 @@ Debugging navigation
 
 - Sending a `2D Nav Goal` in rviz will use the `move_base` and thus bypass the topological navigation. This can be used to test if movement works at all.
 
+Perception People
+-----------------
+
+Very basic command to start it:
+```bash
+$ ROS_MASTER_URI=http://karl:11311 roslaunch perception_people_launch people_tracker_robot.launch  gh_queue_size:=11 vo_queue_size:=22 ubd_queue_size:=33 pt_queue_size:=44 load_params_from_file:=true
+```
+
+Mainly this comes from the [readdme](https://github.com/strands-project/strands_perception_people/tree/hydro-devel/perception_people_launch)
+
+
 Task Scheduling
 ===============
 
@@ -349,6 +356,12 @@ rosrun routine_behaviours patroller_routine_node.py
 > You also need to run the roslaunch task_executor task-scheduler.launch
 
 
+TODO: shouldn't need:
+
+```bash
+$ sudo apt-get install ros-hydro-wait-action
+```
+
 
 GUIs
 ====
@@ -361,10 +374,39 @@ Text-to-Speech
 
 See the [README.md](https://github.com/strands-project/strands_ui/tree/hydro-devel/mary_tts) for how to set voices and language.
 
-TODO: For now, pending [strands-project/strands_ui#53](https://github.com/strands-project/strands_ui/issues/53):
+Marathon 2014 GUI:
+------------------
+
+Largely undecided. @cdondrup created a nice one [for the museum](https://github.com/LCAS/marathon_gui).
+There's the one from [last year](https://github.com/strands-project/strands_deployment/tree/master/y1_interfaces) and @marc-hanheide [is working on one](https://github.com/strands-project/strands_interfaces) which is served at `http://localhost:9091/`.
+
+3D Room Mapping
+===============
 
 ```bash
-$ sudo chmod +x /opt/ros/hydro/share/mary_tts/marytts-5.0/bin/marytts-component-installer.sh
+$ sudo apt-get install ros-hydro-cloud-merge
+$ ROS_MASTER_URI=http://karl:11311 roslaunch cloud_merge mapping.launch
+$ ROS_MASTER_URI=http://karl:11311 roslaunch scitos_ptu ptu_action_server_metric_map.launch
+```
+
+Recording video streams
+=======================
+
+[README](https://github.com/strands-project/data_compression/tree/hydro-devel/mongodb_openni_compression)
+
+Needs to be built from source for now:
+
+```bash
+$ sudo apt-get install yasm
+$ git clone https://github.com/strands-project/data_compression.git
+$ sudo apt-get install ros-hydro-mongodb-log
+$ ROS_MASTER_URI=http://karl:11311 roslaunch mongodb_openni_compression record_server.launch
+```
+
+Compressed and into the mongodb:
+
+```bash
+$ sudo apt-get install ros-hydro-mongodb-openni-compression
 ```
 
 For the cool
@@ -374,6 +416,14 @@ TODO: Mainly @cdondrup stuff.
 
 - `ros-hydro-strands-visualise-speech` (blink LEDs when talking.)
 - The look at people thing
+
+@cdondrup:
+
+> I do @PDuckworth. I guess starting it with load_params_from_file:=true will fix your issue
+> This is due to me misunderstanding on how the datacentre will be set-up and used in the project. Sorry. Will be fixed at some point
+> Please also make sure to run it with log:=true as well to save the stuff to your datacentre
+
+> roslaunch perception_people_launch people_tracker_robot.launch load_params_from_file:=true log:=true
 
 Marathon mileage reporting
 --------------------------
