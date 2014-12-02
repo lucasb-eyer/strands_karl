@@ -40,5 +40,8 @@
 
     <arg name="topological_map" value="$(arg topological_map)"/>
     <arg name="mon_nav_config_file" value="$(arg mon_nav_config_file)"/>
+
+    <arg name="with_site_movebase_params" value="true"/>
+    <arg name="site_movebase_params" value="$(find strands_karl)/resources/umic_1st_floor-nav.yaml"/>
   </include>
 </launch>

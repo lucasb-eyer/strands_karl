@@ -1,0 +1,16 @@
+local_costmap:
+  width: 4
+  height: 4
+  resolution: 0.02
+
+  # Improves navigation in tight corridors tremendously.
+  inflation_layer:
+    inflation_radius: 0.5
+
+  # Gets rid of lingering dots in the costmap, probably coming from the chest_xtion.
+  # obstacle_layer:
+    # raytrace_range: 5.0
+    # z_resolution: 0.5
+    # z_voxels: 3
+    # Not sure if necessary
+    # unknown_threshold: 3
