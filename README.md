@@ -290,7 +290,7 @@ At creation time, a bidirectional edge will be created between two nodes if the 
 So your best bet is exporting the map to a file, edit that file, clear the mongodb and reimport the file:
 
 ```bash
-$ rosrun topological_utils map_export.py umic_1st_floor /opt/strands/maps/umic_1st_floor.tplg`
+$ rosrun topological_utils map_export.py umic_1st_floor /opt/strands/maps/umic_1st_floor.tplg
 $ mongo localhost:62345/message_store
 > db.topological_maps.remove({map: "umic_1st_floor"})
 $ rosrun topological_utils insert_map.py /opt/strands/maps/umic_1st_floor.tmap umic_1st_floor umic_1st_floor
