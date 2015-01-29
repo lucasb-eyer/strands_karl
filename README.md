@@ -294,7 +294,8 @@ So your best bet is exporting the map to a file, edit that file, clear the mongo
 $ rosrun topological_utils map_export.py umic_1st_floor /opt/strands/maps/umic_1st_floor.tplg`
 $ mongo localhost:62345/message_store
 > db.topological_maps.remove({map: "umic_1st_floor"})
-$ rosrun topological_utils insert_map.py /opt/strands/maps/umic_1st_floor.tmap umic_1st_floor umic_1st_floor
+$ rosrun topological_utils insert_map.py /home/novak/overlay/src/strands_karl/resources/maps/umic_1st_floor.tplg umic_1st_floor umic_1st_floor
+
 ```
 
 Whenever you change the map in mongodb, you need to ask for it to be republished by running `rosrun topological_utils topological_map_update.py`, though see [strands-project/strands_navigation#139](https://github.com/strands-project/strands_navigation/issues/139)
