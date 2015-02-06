@@ -150,20 +150,28 @@ Udev-rules
 - `/etc/udev/rules.d/72-persistent-can.rules`
 
     ```
-    KERNEL=="ttyUSB?", ENV{ID_VENDOR}=="MetraLabs_GmbH", ENV{ID_MODEL}=="SCITOS_MCU", ENV{MINOR}=="2", NAME="can"
+    KERNEL=="ttyUSB?", ENV{ID_VENDOR}=="MetraLabs_GmbH", ENV{ID_MODEL}=="SCITOS_MCU", ENV{MINOR}=="2", SYMLINK+="can"
     ```
 
 - `/etc/udev/rules.d/72-persistent-laser.rules`
 
     ```
-    KERNEL=="ttyUSB?", ENV{ID_VENDOR}=="MetraLabs_GmbH", ENV{ID_MODEL}=="SCITOS_MCU", ENV{MINOR}=="0", NAME="laser"
+    KERNEL=="ttyUSB?", ENV{ID_VENDOR}=="MetraLabs_GmbH", ENV{ID_MODEL}=="SCITOS_MCU", ENV{MINOR}=="0", SYMLINK+="laser"
     ```
 
 - `/etc/udev/rules.d/73-persistent-joystick.rules`
 
     ```
-    KERNEL=="js?", ENV{ID_VENDOR}=="Logitech", ENV{ID_MODEL}=="Wireless_Gamepad_F710", NAME="input/rumblepad"
+    KERNEL=="js?", ENV{ID_VENDOR}=="Logitech", ENV{ID_MODEL}=="Wireless_Gamepad_F710", SYMLINK+="input/rumblepad"
     ```
+   
+Also the following needs to done to ensure you can actually access the laser and can devices:
+
+```
+sudo adduser strands dialout
+```
+
+Repeat this for every user that wants to start the strands system. 
 
 Moving the PTU
 ==============
