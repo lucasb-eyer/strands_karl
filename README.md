@@ -142,7 +142,11 @@ and will connect once the initialization is done.
 MIRA
 ====
 
-We still need to have the MIRA license that were shipped with the robot located in `/opt/MIRA-licenses`.
+We still need to have the MIRA license that were shipped with the robot located in `/opt/MIRA-licenses`. Then add the following to your `~/.bashrc`. 
+
+```
+export MIRA_PATH=/opt/mira-scitos
+```
 
 Udev-rules
 ==========
