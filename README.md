@@ -79,7 +79,7 @@ $ sudo apt-get autoremove --purge ntpdate
 $ sudo apt-get install chrony
 ```
 
-Then, replace the servers in `/etc/chrony/chrony.conf` by:
+Then, replace the servers in `/etc/chrony.chrony.conf` by:
 
 ```
 server karl minpoll 0 maxpoll 5 maxdelay .05
@@ -248,12 +248,6 @@ pointcloud `/move_base/points_obstacle` also always seems to contain anything? [
 Monitored Navigation
 --------------------
 
-TODO: For now, it's not taken in by the base distro so
-
-```bash
-$ sudo apt-get install ros-hydro-strands-recovery-behaviours
-```
-
 It's being launched by `strands_navigation.launch` through `strands_recovery_behaviours/strands_monitored_nav.launch` and that should be all that's needed for strands.
 
 TODO:
@@ -354,14 +348,6 @@ rosrun routine_behaviours patroller_routine_node.py
 > Ok, I'll try that
 > With that the robot should run a patrol then if it gets idle it should pick a random node to visit.
 > You also need to run the roslaunch task_executor task-scheduler.launch
-
-
-TODO: shouldn't need:
-
-```bash
-$ sudo apt-get install ros-hydro-wait-action
-```
-
 
 GUIs
 ====
