@@ -4,10 +4,10 @@
   <arg name="machine" default="localhost"/>
   <arg name="user" default=""/>
   <arg name="head_camera" default="true"/>
-  <arg name="head_ip" default="bruxelles.local"/>
+  <arg name="head_ip" default="bruxelles"/>
   <arg name="head_user" default="scitos"/>
   <arg name="chest_camera" default="true"/>
-  <arg name="chest_ip" default="amsterdam.local"/>
+  <arg name="chest_ip" default="amsterdam"/>
   <arg name="chest_user" default="scitos"/>
 
   <machine name="$(arg machine)" address="$(arg machine)" env-loader="$(optenv ROS_ENV_LOADER)" user="$(arg user)" default="true"/>
