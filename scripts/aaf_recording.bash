@@ -11,8 +11,10 @@ tmux new-window -t $SESSION:0 -n 'core'
 tmux new-window -t $SESSION:1 -n 'base'
 tmux new-window -t $SESSION:2 -n 'robot'
 tmux new-window -t $SESSION:3 -n 'cams'
-tmux new-window -t $SESSION:4 -n 'rec'
-tmux new-window -t $SESSION:5 -n 'rqt'
+tmux new-window -t $SESSION:4 -n 'ppl'
+tmux new-window -t $SESSION:5 -n 'loc'
+tmux new-window -t $SESSION:6 -n 'rqt'
+tmux new-window -t $SESSION:7 -n 'rec'
 
 # Sometimes 2 is not enough. (Avoids doubling commands; "waits for the shells".)
 sleep 3
@@ -34,9 +36,13 @@ tmux send-keys "roslaunch strands_karl karl_robot.launch"
 tmux select-window -t $SESSION:3
 tmux send-keys "ROS_MASTER_URI=http://karl:11311 roslaunch strands_karl karl_cams.launch"
 tmux select-window -t $SESSION:4
-tmux send-keys "ssh scitos@bruxelles"
+tmux send-keys "ROS_MASTER_URI=http://karl:11311 roslaunch strands_karl karl_people.launch"
 tmux select-window -t $SESSION:5
+tmux send-keys "roslaunch strands_karl karl_localization_only.launch"
+tmux select-window -t $SESSION:6
 tmux send-keys "rqt"
+tmux select-window -t $SESSION:7
+tmux send-keys "ssh scitos@bruxelles"
 
 # Set default window
 tmux select-window -t $SESSION:0

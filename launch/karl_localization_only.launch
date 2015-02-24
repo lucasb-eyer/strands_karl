@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="machine" default="localhost"/>
+  <arg name="user" default=""/>
+  <arg name="map" default="$(find strands_karl)/resources/maps/aaf_winter.yaml"/>
+
+  <!-- lanch map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+
+  <!-- launch AMCL -->
+  <include file="$(find scitos_2d_navigation)/launch/amcl.launch">
+    <arg name="machine" value="$(arg machine)"/>
+    <arg name="user" value="$(arg user)"/>
+  </include>
+</launch>
