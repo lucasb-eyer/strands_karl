@@ -332,6 +332,7 @@ $ ROS_MASTER_URI=http://karl:11311 roslaunch perception_people_launch people_tra
 
 Mainly this comes from the [readdme](https://github.com/strands-project/strands_perception_people/tree/hydro-devel/perception_people_launch)
 
+The `people_tracker` needs `apt-get install ros-indigo-leg-detector`.
 
 Task Scheduling
 ===============
