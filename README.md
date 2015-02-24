@@ -144,7 +144,7 @@ MIRA
 ====
 
 We still need to have the MIRA license that were shipped with the robot located in `/opt/MIRA-licenses`.
-The MIRA_PATH env. variable has to be set: export MIRA_PATH=/opt/mira-scitos
+The MIRA_PATH env. variable has to be set: `export MIRA_PATH=/opt/mira-scitos`
 
 Udev-rules
 ==========
