@@ -58,6 +58,11 @@ If you want to be able to hotplug a screen on their GPU, you also need to run th
 $ sudo nvidia-xconfig --allow-empty-initial-configuration
 ```
 
+Now whenever you want to start something that needs OpenGL/CUDA remotely, make sure to:
+
+1. *Not* specify the `-X` or `-Y` flag to any `ssh` command, and
+2. Prefix the command you want to run with `DISPLAY=:0.0`, e.g. `DISPLAY=:0.0 roslaunch my_gpu_computing node_is_awesome.launch`.
+
 Clock-Sync
 ----------
 
