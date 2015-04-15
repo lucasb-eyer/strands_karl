@@ -84,7 +84,7 @@ $ sudo apt-get autoremove --purge ntpdate
 $ sudo apt-get install chrony
 ```
 
-Then, replace the servers in `/etc/chrony.chrony.conf` by:
+Then, replace the servers in `/etc/chrony/chrony.conf` by:
 
 ```
 server karl minpoll 0 maxpoll 5 maxdelay .05
