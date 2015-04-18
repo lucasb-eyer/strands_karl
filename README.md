@@ -245,7 +245,7 @@ Instructions are in [the README.md](https://github.com/strands-project/scitos_ap
 Obstacle/Holes avoidance
 ------------------------
 
-First, calibrate the chest camera by following [this README.md](https://github.com/strands-project/scitos_common).
+First, calibrate the chest camera by following [this README.md](https://github.com/strands-project/strands_movebase/tree/indigo-devel/calibrate_chest).
 Basically, it's just `rosrun calibrate_chest calibrate_chest` when almost only the floor is visible
 in the chest cam. Have the datacentre running for storing the calibration in there.
 It will open a viewer-window showing the "ground plane" and an axis for the camera. Close it.
