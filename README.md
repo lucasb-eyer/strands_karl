@@ -178,7 +178,7 @@ rostopic pub --once /ptu/cmd sensor_msgs/JointState "header:
   stamp: {secs: 0, nsecs: 0}
   frame_id: ''
 name: ['tilt', 'pan']
-position: [1, 0.5]
+position: [0.1, 2.0]
 velocity: [0.6, 0.6]
 effort: [1, 1]" 
 ```
