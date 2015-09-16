@@ -1,0 +1,493 @@
+node:
+	ChargingPoint
+	waypoint:
+		 0, 0, 0, 0, 0, 0, 1
+	edges:
+		Station, undocking
+	vertices:
+		 0.14, 0.34
+		-0.14, 0.34
+		-0.34, 0.14
+		-0.34,-0.14
+		-0.14,-0.34
+		 0.14,-0.34
+node:
+	Station
+	waypoint:
+		-1.0, 0, 0, 0, 0, 0, 1
+	edges:
+		ChargingPoint, docking
+		RedLightDistrict, move_base
+		Umer, move_base
+	vertices:
+		 0.690, 0.287
+		 0.287, 0.690
+		-0.287, 0.690
+		-0.690, 0.287
+		-0.690,-0.287
+		-0.287,-0.690
+		 0.287,-0.690
+		 0.690,-0.287
+node:
+	RedLightDistrict
+	waypoint:
+		-1.0,-1.80, 0, 0, 0, 1, 0
+	edges:
+		Station, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	Umer
+	waypoint:
+		-1.5, 2.35, 0, 0, 0, 1, 0
+	edges:
+		Station, move_base
+		IshratMichael, move_base
+		DoorInside129, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	IshratMichael
+	waypoint:
+		-1.8, 5.45, 0, 0, 0, 1, 0
+	edges:
+		Umer, move_base
+		DoorInside129, move_base
+		Vojta, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	Vojta
+	waypoint:
+		-1.0, 7.06, 0, 0, 0,-0.272597, 0.962128
+	edges:
+		IshratMichael, move_base
+		DoorInside129, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInside129
+	waypoint:
+		-0.5, 4.2, 0, 0, 0, 0, 1
+	edges:
+		Vojta, move_base
+		IshratMichael, move_base
+		Umer, move_base
+		DoorOutside129, doorPassing
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutside129
+	waypoint:
+		1.15,4.1,0,0,0,1,0
+	edges:
+		MakeSammich, move_base
+		DoorInside129, doorPassing
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	MakeSammich
+	waypoint:
+		 2.5, 4.0, 0, 0, 0, 0, 1
+	edges:
+		DoorOutside121, move_base
+		DoorOutside129, move_base
+		DoorOutsideDora, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutside121
+	waypoint:
+		 4.8, 1.3, 0, 0, 0, 0, 1
+	edges:
+		DoorOutsideDora, move_base
+		MakeSammich, move_base
+		AlmostFree, move_base
+		DoorInside121, doorPassing
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInside121
+	waypoint:
+		 6.1, 1.3, 0, 0, 0, 1, 0
+	edges:
+		DoorOutside121, doorPassing
+		RoomInside121, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	RoomInside121
+	waypoint:
+		 7.6, 1, 0, 0, 0, 0, 1
+	edges:
+		DoorInside121, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	AlmostFree
+	waypoint:
+		 4.8, 0, 0, 0, 0,-0.726563, 0.687099
+	edges:
+		DoorOutside121, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutsideDora
+	waypoint:
+		 4.8, 6.2, 0, 0, 0, 0, 1
+	edges:
+		MakeSammich, move_base
+		DoorInsideDora, doorPassing
+		DoorOutside121, move_base
+		DoorOutsideIsolationCell, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInsideDora
+	waypoint:
+		 6.1, 6.2, 0, 0, 0, 1, 0
+	edges:
+		DoorOutsideDora, doorPassing
+		ExploraRoom, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	ExploraRoom
+	waypoint:
+		 7.1, 4, 0, 0, 0, 0.560045, 0.828462
+	edges:
+		DoorInsideDora, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutsideIsolationCell
+	waypoint:
+		 4.9, 11, 0, 0, 0, 0, 1
+	edges:
+		DoorOutsideDora, move_base
+		DoorInsideIsolationCell, doorPassing
+		WaitingForBastian, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInsideIsolationCell
+	waypoint:
+		 6.1, 11, 0, 0, 0, 1, 0
+	edges:
+		DoorOutsideIsolationCell, doorPassing
+		RoomInsideIsolationCell, move_base
+		BabyStroller, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	RoomInsideIsolationCell
+	waypoint:
+		 6.9, 10.6, 0, 0, 0, 0, 1
+	edges:
+		DoorInsideIsolationCell, move_base
+		BabyStroller, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	BabyStroller
+	waypoint:
+		 6.87, 9.41, 0, 0, 0, 0.159938, 0.987127
+	edges:
+		DoorInsideIsolationCell, move_base
+		RoomInsideIsolationCell, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	WaitingForBastian
+	waypoint:
+		 4.9, 15.8, 0, 0, 0, 0, 1
+	edges:
+		DoorOutsideIsolationCell, move_base
+		DoorOutsideDungeon, move_base
+		DoorOutside126, move_base
+		BrotherLaserjet, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutsideDungeon
+	waypoint:
+		 4.9, 17, 0, 0, 0, 0.686723, 0.726919
+	edges:
+		DoorInsideDungeon, doorPassing
+		WaitingForBastian, move_base
+		BrotherLaserjet, move_base
+		DoorOutside126, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInsideDungeon
+	waypoint:
+		 5.34, 18.42, 0, 0, 0, 0.883264,-0.468875
+	edges:
+		DoorOutsideDungeon, doorPassing
+		SecretSyerva, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	SecretSyerva
+	waypoint:
+		 6.1, 20.5, 0, 0, 0, 0, 1
+	edges:
+		DoorInsideDungeon, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorOutside126
+	waypoint:
+		 2.35, 17, 0, 0, 0, 0.716690, 0.697392
+	edges:
+		BrotherLaserjet, move_base
+		DoorOutsideDungeon, move_base
+		WaitingForBastian, move_base
+		DoorOutside126, doorPassing
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	BrotherLaserjet
+	waypoint:
+		 1.3, 16.5, 0, 0, 0, 1, 0
+	edges:
+		DoorInsideOtherOne, doorPassing
+		DoorOutside126, move_base
+		DoorOutsideDungeon, move_base
+		WaitingForBastian, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DoorInsideOtherOne
+	waypoint:
+		-0.4, 16.5, 0, 0, 0, 0, 1
+	edges:
+		BrotherLaserjet, doorPassing
+		DogPflanzi, move_base
+		EstherStefan, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	DogPflanzi
+	waypoint:
+		-0.9, 20.5, 0, 0, 0, 1, 0
+	edges:
+		DoorInsideOtherOne, move_base
+		EstherStefan, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	EstherStefan
+	waypoint:
+		-0.9, 15, 0, 0, 0, 0.973758, 0.227587
+	edges:
+		DoorInsideOtherOne, move_base
+		DogPflanzi, move_base
+		PatrickWolfgang, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430
+node:
+	PatrickWolfgang
+	waypoint:
+		-1.2, 10.5, 0, 0, 0, 0.994486, 0.104871
+	edges:
+		EstherStefan, move_base
+	vertices:
+		 1.035, 0.430
+		 0.430, 1.035
+		-0.430, 1.035
+		-1.035, 0.430
+		-1.035,-0.430
+		-0.430,-1.035
+		 0.430,-1.035
+		 1.035,-0.430

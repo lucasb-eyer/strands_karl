@@ -1,58 +1,27 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="machine" default="localhost"/>
-  <arg name="user" default=""/>
+  <include file="$(find strands_karl)/launch/strands_navigation.launch">
+    <arg name="with_chest_xtion" value="true"/>
+    <arg name="chest_xtion_machine" value="amsterdam"/>
+    <arg name="chest_xtion_user" value="scitos"/>
 
-  <arg name="with_mux" default="true"/>
-
-  <!-- Camera to use for navigation -->
-  <arg name="with_chest_xtion" default="true"/>
-  <arg name="chest_xtion_name" default="chest_xtion"/>
-  <!-- The following is so that the obstacle-avoidance stuff runs on the same
-       pc as the chest-cam, probably not to saturate the switch with point-clouds -->
-  <arg name="chest_xtion_machine" default="amsterdam.local"/>
-  <arg name="chest_xtion_user" default="scitos"/>
-
-  <!-- Map(s) to use for navigations -->
-  <arg name="map" default="$(find strands_karl)/resources/maps/umic_1st_floor.yaml"/>
-  <arg name="with_no_go_map" default="false"/>
-  <arg name="no_go_map" default="$(find strands_karl)/resources/maps/umic_1st_floor-nogo.yaml"/>
-  <arg name="topological_map" default="umic_1st_floor"/>
-
-  <!-- Configures the robot's behaviour when it has problems. -->
-  <arg name="mon_nav_config_file" default="$(find strands_recovery_behaviours)/config/monitored_nav_config.yaml"/>
-
-  <!-- Main part for navigation: The move_base and all chest-costmap stuff. -->
-  <include file="$(find strands_bringup)/launch/strands_navigation.launch">
-    <arg name="machine" value="$(arg machine)"/>
-    <arg name="user" value="$(arg user)"/>
-
-    <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
-    <arg name="chest_xtion_name" value="$(arg chest_xtion_name)"/>
-    <arg name="chest_xtion_machine" value="$(arg chest_xtion_machine)"/>
-    <arg name="chest_xtion_user" value="$(arg chest_xtion_user)"/>
-
-    <arg name="map" value="$(arg map)"/>
-    <arg name="with_no_go_map" value="$(arg with_no_go_map)"/>
-    <arg name="no_go_map" value="$(arg no_go_map)"/>
-
-    <arg name="with_mux" value="$(arg with_mux)"/>
-
-    <arg name="topological_map" value="$(arg topological_map)"/>
-    <arg name="mon_nav_config_file" value="$(arg mon_nav_config_file)"/>
-
-    <!-- Don't turn off any EBC while docking! -->
-    <arg name="lightEBC" value=""/>
-
-    <arg name="z_stair_threshold" value="0.2"/>
-    <arg name="z_obstacle_threshold" value="0.1"/>
     <arg name="with_head_xtion" value="true"/>
+    <arg name="head_xtion_machine" value="bruxelles"/>
+    <arg name="head_xtion_user" value="scitos"/>
+
+    <arg name="map" value="$(find strands_karl)/resources/maps/umic_1st_floor.yaml"/>
+    <arg name="topological_map" value="umic_1st_floor"/>
 
     <arg name="with_site_movebase_params" value="true"/>
     <arg name="site_movebase_params" value="$(find strands_karl)/resources/maps/umic_1st_floor-nav.yaml"/>
 
-    <arg name="subsample_resolution" value="0.02"/>
-    <arg name="subsample_min_points" value="2"/>
-    <arg name="subsample_skip_points" value="10"/>
+    <arg name="subsample_resolution" default="0.02"/>
+    <arg name="subsample_min_points" default="2"/>
+    <arg name="subsample_skip_points" default="10"/>
+
+    <arg name="positionUpdate" default="true"/>
+
+    <!-- <arg name="z_stair_threshold" value="0.2"/> -->
+    <!-- <arg name="z_obstacle_threshold" value="0.1"/> -->
   </include>
 </launch>

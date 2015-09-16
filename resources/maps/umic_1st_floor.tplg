@@ -1,493 +1,2945 @@
-node:
-	ChargingPoint
-	waypoint:
-		 0, 0, 0, 0, 0, 0, 1
-	edges:
-		Station, undocking
-	vertices:
-		 0.14, 0.34
-		-0.14, 0.34
-		-0.34, 0.14
-		-0.34,-0.14
-		-0.14,-0.34
-		 0.14,-0.34
-node:
-	Station
-	waypoint:
-		-1.0, 0, 0, 0, 0, 0, 1
-	edges:
-		ChargingPoint, docking
-		RedLightDistrict, move_base
-		Umer, move_base
-	vertices:
-		 0.690, 0.287
-		 0.287, 0.690
-		-0.287, 0.690
-		-0.690, 0.287
-		-0.690,-0.287
-		-0.287,-0.690
-		 0.287,-0.690
-		 0.690,-0.287
-node:
-	RedLightDistrict
-	waypoint:
-		-1.0,-1.80, 0, 0, 0, 1, 0
-	edges:
-		Station, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	Umer
-	waypoint:
-		-1.5, 2.35, 0, 0, 0, 1, 0
-	edges:
-		Station, move_base
-		IshratMichael, move_base
-		DoorInside129, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	IshratMichael
-	waypoint:
-		-1.8, 5.45, 0, 0, 0, 1, 0
-	edges:
-		Umer, move_base
-		DoorInside129, move_base
-		Vojta, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	Vojta
-	waypoint:
-		-1.0, 7.06, 0, 0, 0,-0.272597, 0.962128
-	edges:
-		IshratMichael, move_base
-		DoorInside129, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInside129
-	waypoint:
-		-0.5, 4.2, 0, 0, 0, 0, 1
-	edges:
-		Vojta, move_base
-		IshratMichael, move_base
-		Umer, move_base
-		DoorOutside129, doorPassing
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutside129
-	waypoint:
-		1.15,4.1,0,0,0,1,0
-	edges:
-		MakeSammich, move_base
-		DoorInside129, doorPassing
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	MakeSammich
-	waypoint:
-		 2.5, 4.0, 0, 0, 0, 0, 1
-	edges:
-		DoorOutside121, move_base
-		DoorOutside129, move_base
-		DoorOutsideDora, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutside121
-	waypoint:
-		 4.8, 1.3, 0, 0, 0, 0, 1
-	edges:
-		DoorOutsideDora, move_base
-		MakeSammich, move_base
-		AlmostFree, move_base
-		DoorInside121, doorPassing
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInside121
-	waypoint:
-		 6.1, 1.3, 0, 0, 0, 1, 0
-	edges:
-		DoorOutside121, doorPassing
-		RoomInside121, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	RoomInside121
-	waypoint:
-		 7.6, 1, 0, 0, 0, 0, 1
-	edges:
-		DoorInside121, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	AlmostFree
-	waypoint:
-		 4.8, 0, 0, 0, 0,-0.726563, 0.687099
-	edges:
-		DoorOutside121, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutsideDora
-	waypoint:
-		 4.8, 6.2, 0, 0, 0, 0, 1
-	edges:
-		MakeSammich, move_base
-		DoorInsideDora, doorPassing
-		DoorOutside121, move_base
-		DoorOutsideIsolationCell, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInsideDora
-	waypoint:
-		 6.1, 6.2, 0, 0, 0, 1, 0
-	edges:
-		DoorOutsideDora, doorPassing
-		ExploraRoom, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	ExploraRoom
-	waypoint:
-		 7.1, 4, 0, 0, 0, 0.560045, 0.828462
-	edges:
-		DoorInsideDora, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutsideIsolationCell
-	waypoint:
-		 4.9, 11, 0, 0, 0, 0, 1
-	edges:
-		DoorOutsideDora, move_base
-		DoorInsideIsolationCell, doorPassing
-		WaitingForBastian, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInsideIsolationCell
-	waypoint:
-		 6.1, 11, 0, 0, 0, 1, 0
-	edges:
-		DoorOutsideIsolationCell, doorPassing
-		RoomInsideIsolationCell, move_base
-		BabyStroller, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	RoomInsideIsolationCell
-	waypoint:
-		 6.9, 10.6, 0, 0, 0, 0, 1
-	edges:
-		DoorInsideIsolationCell, move_base
-		BabyStroller, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	BabyStroller
-	waypoint:
-		 6.87, 9.41, 0, 0, 0, 0.159938, 0.987127
-	edges:
-		DoorInsideIsolationCell, move_base
-		RoomInsideIsolationCell, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	WaitingForBastian
-	waypoint:
-		 4.9, 15.8, 0, 0, 0, 0, 1
-	edges:
-		DoorOutsideIsolationCell, move_base
-		DoorOutsideDungeon, move_base
-		DoorOutside126, move_base
-		BrotherLaserjet, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutsideDungeon
-	waypoint:
-		 4.9, 17, 0, 0, 0, 0.686723, 0.726919
-	edges:
-		DoorInsideDungeon, doorPassing
-		WaitingForBastian, move_base
-		BrotherLaserjet, move_base
-		DoorOutside126, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInsideDungeon
-	waypoint:
-		 5.34, 18.42, 0, 0, 0, 0.883264,-0.468875
-	edges:
-		DoorOutsideDungeon, doorPassing
-		SecretSyerva, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	SecretSyerva
-	waypoint:
-		 6.1, 20.5, 0, 0, 0, 0, 1
-	edges:
-		DoorInsideDungeon, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorOutside126
-	waypoint:
-		 2.35, 17, 0, 0, 0, 0.716690, 0.697392
-	edges:
-		BrotherLaserjet, move_base
-		DoorOutsideDungeon, move_base
-		WaitingForBastian, move_base
-		DoorOutside126, doorPassing
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	BrotherLaserjet
-	waypoint:
-		 1.3, 16.5, 0, 0, 0, 1, 0
-	edges:
-		DoorInsideOtherOne, doorPassing
-		DoorOutside126, move_base
-		DoorOutsideDungeon, move_base
-		WaitingForBastian, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DoorInsideOtherOne
-	waypoint:
-		-0.4, 16.5, 0, 0, 0, 0, 1
-	edges:
-		BrotherLaserjet, doorPassing
-		DogPflanzi, move_base
-		EstherStefan, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	DogPflanzi
-	waypoint:
-		-0.9, 20.5, 0, 0, 0, 1, 0
-	edges:
-		DoorInsideOtherOne, move_base
-		EstherStefan, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	EstherStefan
-	waypoint:
-		-0.9, 15, 0, 0, 0, 0.973758, 0.227587
-	edges:
-		DoorInsideOtherOne, move_base
-		DogPflanzi, move_base
-		PatrickWolfgang, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
-node:
-	PatrickWolfgang
-	waypoint:
-		-1.2, 10.5, 0, 0, 0, 0.994486, 0.104871
-	edges:
-		EstherStefan, move_base
-	vertices:
-		 1.035, 0.430
-		 0.430, 1.035
-		-0.430, 1.035
-		-1.035, 0.430
-		-1.035,-0.430
-		-0.430,-1.035
-		 0.430,-1.035
-		 1.035,-0.430
+- meta:
+    map: umic_1st_floor
+    node: OtherRoomEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: OtherRoomEntry_BrotherLaserjet
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: BrotherLaserjet
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: OtherRoomEntry_OtherRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: OtherRoomEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.70649766922
+        x: 5.79740433437e-09
+        y: -1.19898970752e-08
+        z: -0.707715332508
+      position:
+        x: -19.9630279541
+        y: 2.89265036583
+        z: 2.89791940444e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: StalkerBase
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: StalkerBase_StalkerBaseExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBaseExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: StalkerBase
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.959929347038
+        x: 0.0
+        y: 0.0
+        z: 0.280242115259
+      position:
+        x: 26.8241539001
+        y: 8.66754150391
+        z: -9.29590335264e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: FormalCasual
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: FormalCasual_FormalCasualExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: FormalCasual
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999929785728
+        x: 5.7241438256e-09
+        y: 4.48566161992e-09
+        z: -0.0118517009541
+      position:
+        x: -4.32146835327
+        y: 9.03494930267
+        z: -1.35042491078e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: ChargingPoint
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: undocking
+      edge_id: ChargingPoint_Station
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Station
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: '{\"topic\":\"/battery_state\",\"field\":\"charging\", \"val\": true}'
+    map: umic_1st_floor
+    name: ChargingPoint
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+    verts:
+    - x:  0.25
+      y:  0.69
+    - x: -0.1
+      y:  0.69
+    - x: -0.5
+      y:  0.5
+    - x: -0.5
+      y: -0.5
+    - x: -0.1
+      y: -0.69
+    - x:  0.25
+      y: -0.69
+    xy_goal_tolerance: 0.0
+    yaw_goal_tolerance: 0.0
+- meta:
+    map: umic_1st_floor
+    node: Umer
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Umer_PurelyPinkPeas
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: PurelyPinkPeas
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Umer_Indany
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Indany
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Umer_SpecialRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SpecialRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Umer
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.836725413799
+        x: 3.04627185699e-08
+        y: -1.83388815245e-09
+        z: -0.547622680664
+      position:
+        x: -5.98883676529
+        y: -0.81966561079
+        z: -2.04031089246e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: SpecialRoomExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: SpecialRoomExit_Umer
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Umer
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: SpecialRoomExit_Indany
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Indany
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: SpecialRoomExit_SpecialRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SpecialRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: SpecialRoomExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.70640963316
+        x: -2.98259839049e-09
+        y: -9.24897491927e-09
+        z: 0.707803249359
+      position:
+        x: -7.9479060173
+        y: 1.34278249741
+        z: -2.00963690133e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: MakeSammich
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: MakeSammich_FormalCasualEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: MakeSammich_ExploraDoraEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: MakeSammich_SpecialRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SpecialRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: MakeSammich
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999992847443
+        x: -2.82430576704e-08
+        y: 9.81940484479e-09
+        z: -0.00377824879251
+      position:
+        x: -7.57589387894
+        y: 3.98954319954
+        z: -8.1101653171e-12
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Dungeon
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Dungeon_DungeonExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DungeonExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Dungeon
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.712662100792
+        x: -3.8245304701e-09
+        y: 2.54200536176e-08
+        z: 0.70150744915
+      position:
+        x: -23.3541069031
+        y: 7.02159976959
+        z: -1.35694164238e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: MaMa
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: MaMa_ExploraDoraEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: MaMa_Oracle
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Oracle
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: MaMa
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.713351905346
+        x: 2.06952655013e-09
+        y: 7.48204698198e-09
+        z: 0.700806200504
+      position:
+        x: -14.5455064774
+        y: 6.45669746399
+        z: 0.0
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Oracle
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Oracle_MaMa
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: MaMa
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Oracle_DungeonEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DungeonEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Oracle_BrotherLaserjet
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: BrotherLaserjet
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Oracle
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.694914758205
+        x: 0.0
+        y: 0.0
+        z: 0.719092130661
+      position:
+        x: -19.3595790863
+        y: 6.44819355011
+        z: -1.17252102472e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: BrotherLaserjet
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: BrotherLaserjet_Oracle
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Oracle
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: BrotherLaserjet_DungeonEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DungeonEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: BrotherLaserjet_OtherRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: BrotherLaserjet
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: -0.708039402962
+        x: 1.55690127457e-08
+        y: -4.39178293732e-08
+        z: 0.706172943115
+      position:
+        x: -19.937713623
+        y: 4.52532291412
+        z: 1.95086259647e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: OtherRoomExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: OtherRoomExit_OtherRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: OtherRoomExit_DoggyDorm
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DoggyDorm
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: OtherRoomExit_Germany
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Germany
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: OtherRoomExit_SlowDog
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SlowDog
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: OtherRoomExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.72036588192
+        x: 0.0
+        y: 0.0
+        z: 0.6935942173
+      position:
+        x: -19.9544086456
+        y: 1.53134870529
+        z: 8.26759494199e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: DoggyDorm
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: DoggyDorm_OtherRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: DoggyDorm_Germany
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Germany
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: DoggyDorm
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: -0.78534424305
+        x: -2.36299957379e-09
+        y: -3.69841650638e-08
+        z: 0.619059383869
+      position:
+        x: -24.1499710083
+        y: 0.570213019848
+        z: -1.31678140614e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: FoodStation
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: FoodStation_Portal
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Portal
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: FoodStation_LesserCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: LesserCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: FoodStation
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.7071067811865476
+        x: 0.0
+        y: 0.0
+        z: -0.7071067811865476
+      position:
+        x: 2.87632155418
+        y: 0.0869506597519
+        z: 0
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: StalkerBaseExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: StalkerBaseExit_StalkerBaseEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBaseEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: StalkerBaseExit_StalkerBase
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBase
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: StalkerBaseExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0
+        x: 0
+        y: 0
+        z: 1
+      position:
+        x: 25.2714653015
+        y: 6.58960580826
+        z: 6.60221599613e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: DungeonExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: DungeonExit_DungeonEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DungeonEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: human_aware_navigation
+      edge_id: DungeonExit_Dungeon
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Dungeon
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: DungeonExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: -21.7683067322
+        y: 6.35930109024
+        z: 3.68992586486e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Portal
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Portal_Station
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Station
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Portal_FoodStation
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FoodStation
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Portal_CodersRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Portal_LesserCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: LesserCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Portal
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0
+        x: 0
+        y: 0
+        z: 1
+      position:
+        x: 1.19629704952
+        y: 1.21446597576
+        z: 0.0
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room106Exit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: Room106Exit_Room106Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room106Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room106Exit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.00799037516117
+        x: -7.71160468815e-09
+        y: 6.27808871556e-09
+        z: 0.99996805191
+      position:
+        x: 23.8028106689
+        y: 3.95580506325
+        z: 1.66081288999e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room106Entry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room106Entry_Room104Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room104Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room106Entry_StalkerBaseEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBaseEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: Room106Entry_Room106Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room106Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room106Entry_GhostRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room106Entry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999997198582
+        x: -3.60926444287e-09
+        y: 5.54437572242e-11
+        z: -0.00236882618628
+      position:
+        x: 22.3010730743
+        y: 3.97383475304
+        z: 4.9135873148e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostRoomEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: GhostRoomEntry_Room106Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room106Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: GhostRoomEntry_GhostRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostRoomEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.706576228142
+        x: -6.35240027247e-10
+        y: 5.487236443e-09
+        z: -0.707636892796
+      position:
+        x: 22.051618576
+        y: 2.909096241
+        z: -1.02404952573e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostRoom3
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: GhostRoom3_GhostRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoom3_GhostRoom2
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostRoom3
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.706372380257
+        x: 6.64224408808e-09
+        y: -2.34201813498e-08
+        z: -0.707840442657
+      position:
+        x: 26.841588974
+        y: 0.525462985039
+        z: -9.86114148671e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room104Entry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room104Entry_Room103Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room104Entry_StalkerBaseEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBaseEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room104Entry_Room106Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room106Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room104Entry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.717354059219
+        x: 0.0
+        y: 0.0
+        z: 0.696708798409
+      position:
+        x: 21.4876537323
+        y: 6.55910491943
+        z: -1.38777878078e-17
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostRoomExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: GhostRoomExit_GhostRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoomExit_GhostRoom1
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoomExit_GhostRoom3
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom3
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoomExit_GhostRoom2
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostRoomExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.707518279552
+        x: 1.54276569297e-09
+        y: 5.41447331415e-09
+        z: 0.706695020199
+      position:
+        x: 22.0422019958
+        y: 1.4730899334
+        z: -6.91704749034e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostRoom2
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: GhostRoom2_GhostRoom1
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoom2_GhostRoom3
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom3
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoom2_GhostRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostRoom2
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.707323849201
+        x: 2.38389841201e-09
+        y: 7.44342720793e-09
+        z: 0.706889629364
+      position:
+        x: 21.9837017059
+        y: -1.25082087517
+        z: 3.46944695195e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: CodersRoomEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: CodersRoomEntry_CodersRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: CodersRoomEntry_GhostKitchen
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostKitchen
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: CodersRoomEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.714925706387
+        x: 0.0
+        y: 0.0
+        z: -0.699200451374
+      position:
+        x: 11.8916473389
+        y: 2.66975045204
+        z: -1.38777878078e-17
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostKitchen
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: GhostKitchen_CodersRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostKitchen_Room102Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostKitchen
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999921381595
+        x: 0.0
+        y: 0.0
+        z: 0.0125391638098
+      position:
+        x: 11.4225493216
+        y: 4.19334879243
+        z: -1.90998974969e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room101
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room101_Room101Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room101Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room101
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.690141797066
+        x: 0.0
+        y: 0.0
+        z: 0.723674178123
+      position:
+        x: 8.09703159332
+        y: 8.85861206055
+        z: 6.93889390391e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: LesserCoders
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: LesserCoders_Portal
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Portal
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: LesserCoders_FoodStation
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FoodStation
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: LesserCoders_CodersRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: LesserCoders_HigherCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: HigherCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: LesserCoders
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.702129542828
+        x: 0.0
+        y: 0.0
+        z: -0.71204918623
+      position:
+        x: 7.6477227211
+        y: 0.313337087631
+        z: -7.34226096588e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: CodersRoomExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: CodersRoomExit_Portal
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Portal
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: CodersRoomExit_LesserCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: LesserCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: CodersRoomExit_HigherCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: HigherCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: CodersRoomExit_CodersRoomEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: CodersRoomExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.708390295506
+        x: 1.11640707789e-09
+        y: 8.51819148551e-09
+        z: 0.705820977688
+      position:
+        x: 11.8982419968
+        y: 1.47702205181
+        z: 2.69532632324e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room101Entry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room101Entry_Room102Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: Room101Entry_Room101Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room101Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room101Entry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.709037542343
+        x: 1.0312390053e-08
+        y: 5.47086509428e-09
+        z: 0.705170691013
+      position:
+        x: 8.25117301941
+        y: 6.50059080124
+        z: -2.16400880548e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room101Exit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: Room101Exit_Room101Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room101Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room101Exit_Room101
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room101
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room101Exit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.708982944489
+        x: 5.8412270576e-09
+        y: 2.26330731934e-09
+        z: -0.705225646496
+      position:
+        x: 8.2425403595
+        y: 7.73452568054
+        z: 0.0
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room103Entry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room103Entry_Room102Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room103Entry_Room104Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room104Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: Room103Entry_Room103Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room103Entry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: -0.708951115608
+        x: -1.65336260238e-07
+        y: -9.44808817849e-08
+        z: -0.705257475376
+      position:
+        x: 16.6983833313
+        y: 6.5504488945
+        z: 1.25700852505e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room102
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room102_Room102Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room102
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.36645256921
+        x: 0.0
+        y: 0.0
+        z: 0.930436733217
+      position:
+        x: 13.3569300146
+        y: 9.26142637703
+        z: -6.93889390391e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: HigherCoders
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: HigherCoders_LesserCoders
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: LesserCoders
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: HigherCoders_CodersRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: CodersRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: HigherCoders
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.708777010441
+        x: 2.32795138722e-09
+        y: 2.37793451596e-09
+        z: -0.705432593822
+      position:
+        x: 12.4765386581
+        y: 0.376030683517
+        z: 2.07021951804e-08
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room102Exit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: Room102Exit_Room102Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room102Exit_Room102
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room102Exit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.70598334074
+        x: 1.03506749838e-08
+        y: -9.99686888825e-10
+        z: -0.70822840929
+      position:
+        x: 13.0633506775
+        y: 7.81888151169
+        z: 6.93889390391e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room102Entry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room102Entry_GhostKitchen
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostKitchen
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room102Entry_Room101Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room101Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room102Entry_Room103Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: Room102Entry_Room102Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room102Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room102Entry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.702581942081
+        x: -4.90227680672e-09
+        y: -1.28283001999e-08
+        z: 0.71160286665
+      position:
+        x: 13.0674285889
+        y: 6.50103187561
+        z: -4.25794552394e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room103
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Room103_Room103Exit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103Exit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room103
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.66295723498
+        x: 0.0
+        y: 0.0
+        z: 0.748657267772
+      position:
+        x: 16.145083534
+        y: 9.09633880899
+        z: 0.0
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: StalkerBaseEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: StalkerBaseEntry_Room104Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room104Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: StalkerBaseEntry_StalkerBaseExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: StalkerBaseExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: StalkerBaseEntry_Room106Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room106Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: StalkerBaseEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999998986721
+        x: -3.01834357508e-09
+        y: 2.58314192259e-09
+        z: -0.0014268605737
+      position:
+        x: 23.7913913727
+        y: 6.55911111832
+        z: -8.33020818991e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: GhostRoom1
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: GhostRoom1_GhostRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: GhostRoom1_GhostRoom2
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: GhostRoom2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: GhostRoom1
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.702747404575
+        x: 3.11311776358e-09
+        y: -9.35288824166e-09
+        z: -0.711439490318
+      position:
+        x: 17.2619228363
+        y: 0.561476290226
+        z: -8.66015731349e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Room103Exit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: Room103Exit_Room103Entry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103Entry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Room103Exit_Room103
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Room103
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Room103Exit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.712309956551
+        x: 2.36032171586e-09
+        y: 8.67107985414e-09
+        z: -0.701865077019
+      position:
+        x: 16.6931381226
+        y: 7.94710493088
+        z: 3.46944695195e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Indany
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Indany_Umer
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Umer
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Indany_SpecialRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SpecialRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Indany
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.704434990883
+        x: 8.33366531339e-09
+        y: -1.69406657591e-08
+        z: -0.709768533707
+      position:
+        x: -8.84656620026
+        y: -0.106933027506
+        z: -3.57945659224e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: FormalCasualEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: FormalCasualEntry_MakeSammich
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: MakeSammich
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: FormalCasualEntry_FreedomLook
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FreedomLook
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: FormalCasualEntry_FormalCasualExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: FormalCasualEntry_ExploraDoraEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: FormalCasualEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.694802522659
+        x: -5.44097600308e-10
+        y: 8.28867907643e-09
+        z: 0.71920055151
+      position:
+        x: -4.89701986313
+        y: 6.50894927979
+        z: 1.61067779947e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Germany
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: Germany_OtherRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Germany_DoggyDorm
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DoggyDorm
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Germany_SlowDog
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SlowDog
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Germany
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.703187286854
+        x: 4.80194728425e-09
+        y: -6.18092643734e-09
+        z: -0.711004734039
+      position:
+        x: -19.0026493073
+        y: 0.230925559998
+        z: 9.07393674088e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: SlowDog
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: SlowDog_OtherRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: OtherRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: SlowDog_Germany
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Germany
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: SlowDog
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.668050825596
+        x: 4.68121506003e-08
+        y: 1.2191212484e-09
+        z: -0.744115710258
+      position:
+        x: -14.0828437805
+        y: 0.340453654528
+        z: -1.85870512037e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: Station
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: docking
+      edge_id: Station_ChargingPoint
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ChargingPoint
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Station_PurelyPinkPeas
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: PurelyPinkPeas
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Station_Portal
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Portal
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: Station
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 1.0
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      position:
+        x: -1.21281564236
+        y: 0.0
+        z: 0.0
+    verts:
+    - x: 0.35
+      y: 0.15
+    - x: 0.15
+      y: 0.35
+    - x: -0.15
+      y: 0.35
+    - x: -0.35
+      y: 0.15
+    - x: -0.35
+      y: -0.15
+    - x: -0.15
+      y: -0.35
+    - x: 0.15
+      y: -0.35
+    - x: 0.35
+      y: -0.15
+    xy_goal_tolerance: 0.0
+    yaw_goal_tolerance: 0.0
+- meta:
+    map: umic_1st_floor
+    node: PurelyPinkPeas
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: PurelyPinkPeas_Station
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Station
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: PurelyPinkPeas_Umer
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Umer
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: PurelyPinkPeas
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: -0.704861819744
+        x: 7.94697641027e-09
+        y: -4.57645015217e-08
+        z: 0.709344685078
+      position:
+        x: -2.0857861042
+        y: 0.0232215225697
+        z: 3.5543817889e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: ExploraDoraEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: ExploraDoraEntry_MakeSammich
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: MakeSammich
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: ExploraDoraEntry_FormalCasualEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: ExploraDoraEntry_ExploraDoraExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: ExploraDoraEntry_MaMa
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: MaMa
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: ExploraDoraEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.70871847868
+        x: 8.40527647483e-10
+        y: 4.58068338816e-09
+        z: 0.705491542816
+      position:
+        x: -9.79880905151
+        y: 6.44059848785
+        z: 1.46054153494e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: FormalCasualExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: FormalCasualExit_FormalCasualEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: FormalCasualExit_FormalCasual
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasual
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: FormalCasualExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: -0.712080776691
+        x: -1.81709225444e-08
+        y: -5.67687763464e-08
+        z: 0.702097535133
+      position:
+        x: -4.93458127975
+        y: 7.96452379227
+        z: -1.95464909536e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: ExploraDoraExit
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: ExploraDoraExit_ExploraDoraEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: ExploraDoraExit_ExploraDora
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDora
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: ExploraDoraExit
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.694583568443
+        x: 0.0
+        y: 0.0
+        z: -0.719412028291
+      position:
+        x: -9.74646529598
+        y: 7.76794899169
+        z: -8.92042828493e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: ExploraDora
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: ExploraDora_ExploraDoraExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: ExploraDoraExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: ExploraDora
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.537242531776
+        x: 0.0
+        y: 0.0
+        z: 0.843427836895
+      position:
+        x: -7.88221406937
+        y: 7.95022010803
+        z: 1.26368181197e-09
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: FreedomLook
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: FreedomLook_FormalCasualEntry
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: FormalCasualEntry
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: FreedomLook
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.999970853329
+        x: -3.95489294647e-08
+        y: 3.32664313873e-08
+        z: -0.00763386534527
+      position:
+        x: -2.60878419876
+        y: 6.36473321915
+        z: -3.56632431919e-10
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: SpecialRoomEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: doorPassing
+      edge_id: SpecialRoomEntry_SpecialRoomExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: SpecialRoomExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: SpecialRoomEntry_MakeSammich
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: MakeSammich
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: SpecialRoomEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0.66833157527
+        x: 0.0
+        y: 0.0
+        z: 0.743863499237
+      position:
+        x: -7.73438228194
+        y: 3.07761447281
+        z: -3.46944695195e-18
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: umic_1st_floor
+    node: DungeonEntry
+    pointset: umic_1st_floor
+  node:
+    edges:
+    - action: move_base
+      edge_id: DungeonEntry_Oracle
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: Oracle
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: doorPassing
+      edge_id: DungeonEntry_DungeonExit
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: DungeonExit
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: DungeonEntry_BrotherLaserjet
+      inflation_radius: 0.0
+      map_2d: umic_1st_floor
+      node: BrotherLaserjet
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: umic_1st_floor
+    name: DungeonEntry
+    pointset: umic_1st_floor
+    pose:
+      orientation:
+        w: 0
+        x: 0
+        y: 0
+        z: 1
+      position:
+        x: -20.5275001526
+        y: 6.34139919281
+        z: 8.8632823303e-11
+    verts:
+    - x: 0.69
+      y: 0.29
+    - x: 0.29
+      y: 0.69
+    - x: -0.29
+      y: 0.69
+    - x: -0.69
+      y: 0.29
+    - x: -0.69
+      y: -0.29
+    - x: -0.29
+      y: -0.69
+    - x: 0.29
+      y: -0.69
+    - x: 0.69
+      y: -0.29
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1

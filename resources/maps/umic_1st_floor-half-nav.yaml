@@ -6,7 +6,3 @@ local_costmap:
   # Improves navigation in tight corridors tremendously.
   inflation_layer:
     inflation_radius: 0.5
-
-DWAPlannerROS:
-  max_vel_y: 0.0
-  min_vel_y: 0.0
