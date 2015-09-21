@@ -47,12 +47,12 @@ window 2
 window 3
   split_2
      pane 0
-        cmd_do "ssh a"
+        cmd_do "ssh amsterdam"
         cmd_do "tmux"
         sleep 3
         cmd "roslaunch openni2_launch openni2.launch camera:=chest_xtion depth_registration:=false publish_tf:=false debayer_processing:=true"
      pane 1
-        cmd_do "ssh b"
+        cmd_do "ssh bruxelles"
         cmd_do "tmux"
         sleep 3
         cmd "roslaunch openni2_launch openni2.launch camera:=head_xtion depth_registration:=true publish_tf:=false debayer_processing:=true"
