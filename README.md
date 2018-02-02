@@ -94,6 +94,11 @@ server karl minpoll 0 maxpoll 5 maxdelay .05
 
 And restart chrony with `sudo /etc/init.d/chrony restart`.
 
+To sync manually just do (on each of the side-pcs):
+```
+sudo chronyc -a makestep
+```
+
 Networking
 ==========
 
