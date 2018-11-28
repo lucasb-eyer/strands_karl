@@ -116,8 +116,8 @@ We bought a switch (Netgear GS108), connected the on-board pc (`karl`) and the s
    e.g. `bruxelles.local`. When using the `<machine>` tag, ROS doesn't like that, thus you need to
    add an entry for each of the side pcs to `karl`'s `/etc/hosts` file.
 6. Make sure there's passwordless ssh from `karl` to both sidepcs by creating a passwordless keypair
-   for `karl` and push the public key to the side-pcs. See google.
-7. Add the side-pcs to your `known_hosts` file: `ssh-keyscan bruxelles.local >> ~/.ssh/known_hosts`.
+   for `karl` and push the public key to the side-pcs. See google. Here it is very important to notice that      you also need access to `strands@localhost`. 
+7. Add the side-pcs and Karl to your `known_hosts` file: `ssh-keyscan bruxelles.local >> ~/.ssh/known_hosts`.    Do _NOT_ do this by just ssh-ing somewhere and saying yes to adding the machine yo your `known_hosts` file.    This will result in entries that are not usable by ros. (As in this [issue](http://answers.ros.org/question/41446/a-is-not-in-your-ssh-known_hosts-file/).)
 
 **If you launch anything remotely**, make sure `ROS_MASTER_URI` is set on the *launching* pc.
 
